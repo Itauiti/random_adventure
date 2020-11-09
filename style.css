@@ -24,19 +24,19 @@ body {
     justify-content: space-between;
     color: white;
     max-width: 580px;
-    height: 100%;
+    min-height: 100%;
     margin: 0 auto;
     font-family: 'Suisse';
     box-sizing: border-box;
-    padding: 36px;
-    max-height: 100vh;
+    padding: 30px 36px;
 }
 
-.header {
+.content {
     padding: 30px 0 0;
+    flex-grow: 1;
 }
 
-.logo {
+.content__title {
     font-weight: bold;
     font-size: 24px;
     line-height: 30px;
@@ -44,10 +44,15 @@ body {
     padding-bottom: 80px;
 }
 
-.button {
+.content__button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 130px;
     height: 40px;
-    padding-top: 10px;
+    padding: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
     box-sizing: border-box;
     border: 1px solid white;
     text-align: center;
@@ -56,46 +61,48 @@ body {
     transition: opacity 0.2s;
 }
 
-.button:hover {
+.content__button:hover {
     opacity: 0.5;
 }
 
-.image {
+.content__image {
     width: 100%;
-    max-height: 345px;
+    height: 345px;
+    object-fit: cover;
     margin: 40px auto 60px;
 }
 
-.phrase {
+.content__text {
     font-size: 16px;
     font-weight: bold;
     line-height: 1.6;
     margin: 0;
+    max-width: 480px;
 }
 
 .footer {
     font-size: 14px;
-    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
-.footer_text {
+.footer__text {
     margin: 0;
     padding-bottom: 15px;
 }
 
 @media screen and (max-width: 721px) {
-    .header {
+    .content {
         padding: 15px 0 40px;
     }
-    .logo {
+    .content__title {
         font-size: 20px;
         line-height: 26px;
         padding-bottom: 40px;
     }
-    .image {
+    .content__image {
         margin: 30px auto 40px;
     }
-    .phrase {
+    .content__text {
         font-size: 14px;
     }
     .start-random {
